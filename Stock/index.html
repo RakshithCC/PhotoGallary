@@ -7,6 +7,19 @@
     <title>Stock</title>
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        var downloadLink = document.querySelector('a[download]');
+        downloadLink.addEventListener('click', function(event) {
+          event.preventDefault();
+          var imageSrc = this.href;
+          var link = document.createElement('a');
+          link.href = imageSrc;
+          link.download = 'image.jpg'; // Specify the desired filename for download
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        });
+            </script>
 </head>
 <body>
     <header>
@@ -46,11 +59,12 @@
                         <h5>RakshithCC</h5>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-arrow-down"></i>
+                       
+                        <a href="./images/img4.jpg" download>
+                            <i class="fas fa-arrow-down"></i>
+                        </a>
                     </div>
-                    <div class="icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
+                  
                 </div>
             </div>
 
@@ -66,11 +80,11 @@
                         <h5>Manasa</h5>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-arrow-down"></i>
+                        <a href="./images/img5.jpg" download>
+                            <i class="fas fa-arrow-down"></i>
+                        </a>
                     </div>
-                    <div class="icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
+                    
                 </div>
             </div>
 
@@ -86,11 +100,12 @@
                     <h5>Abhishek</h5>
                 </div>
                 <div class="icon">
-                    <i class="fas fa-arrow-down"></i>
+                    <a href="./images/img9.jpg" download>
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
                 </div>
-                <div class="icon">
-                    <i class="fas fa-heart"></i>
                 </div>
+            
             </div>
         </div>
 
@@ -106,10 +121,9 @@
                             <h5>Sandesh</h5>
                         </div>
                         <div class="icon">
-                            <i class="fas fa-arrow-down"></i>
-                        </div>
-                        <div class="icon">
-                            <i class="fas fa-heart"></i>
+                            <a href="./images/img2.jpg" download>
+                                <i class="fas fa-arrow-down"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -124,33 +138,11 @@
                             <h5>Sneha</h5>
                         </div>
                         <div class="icon">
-                            <i class="fas fa-arrow-down"></i>
+                            <a href="./images/img8.jpg" download>
+                                <i class="fas fa-arrow-down"></i>
+                            </a>
                         </div>
-                        <div class="icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                    </div>
-                     <!-- first Image -->
-               
-                     <!-- first Image -->
-               
-               </div>
-    
-            </div>
-            <div class="column">
-                <!-- first Image -->
-                <div class="img-wrapper">
-                    <img src="./images/img7.jpg" alt="img">
-                    <div class="overlay">
-                        <div class="user">
-                            <i class="fas fa-user-circle"></i>
-                            <h5>Swastik</h5>
-                        </div>
-                        <div class="icon">
-                            <i class="fas fa-arrow-down"></i>
-                        </div>
-                        <div class="icon">
-                            <i class="fas fa-heart"></i>
+                        
                         </div>
                     </div>
                      <!-- first Image -->
@@ -160,19 +152,49 @@
                </div>
     
             </div>
-        </div>
- 
+           
         
-    </section>
-    <footer>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-            <a href="#"><i class="fab fa-facbook-f fa-2x"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in fa-2x"></i></a>
-            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+
+
+
+
+
+            
+<div class="column">
+    <!-- first Image -->
+    <div class="img-wrapper">
+        <img src="./images/img7.jpg" alt="img">
+        <div class="overlay">
+            <div class="user">
+                <i class="fas fa-user-circle"></i>
+                <h5>Swastik</h5>
+            </div>
+            <div class="icon">
+                <a href="./images/img7.jpg" download>
+                    <i class="fas fa-arrow-down"></i>
+                </a>
+            </div>
+            </div>
 
         </div>
-        
+         <!-- first Image -->
+   
+         <!-- first Image -->
+   
+   </div>
+
+</div>
+</div>
+    </section>
+   
+        <footer>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+              <a href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in fa-2x"></i></a>
+              <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+          
     </footer>
     <script>
         const sideNav = document.getElementById('side-nav');
